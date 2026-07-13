@@ -5,7 +5,7 @@ import NavigationBar from './NavigationBar'
 const ViewDonor = () => {
        const  [data,changeData]=useState([])
     const fetchData=()=>{
-        axios.get("https://host-demo-app.onrender.com/api/courses").then(
+        axios.get("https://host-demo-app.onrender.com/api/donors").then(
             (response)=>{
                 changeData(response.data)
             }
