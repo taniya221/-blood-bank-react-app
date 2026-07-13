@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 
 const AddDonar = () => {
@@ -20,7 +21,7 @@ const AddDonar = () => {
 
 
     const inputHandler=(event)=>{
-        changeInput({...input,[event.target.name]:event.target.name})
+        changeInput({...input,[event.target.name]:event.target.value})
     }
 
       const readValue=()=>{
@@ -63,24 +64,24 @@ name="age" value={input.age} onChange={inputHandler}
 <label htmlFor="" className="form-label">Gender</label>
 <select name="" id="" className="form-control" name="gender" value={input.gender} onChange={inputHandler}>
     <option value="">Select</option>
-    <option value="">Male</option>
-    <option value="">Female</option>
-    <option value="">Other</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
 </select>
     </div>
     <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
 <label htmlFor="" className="form-label">Blood Group </label>
-<select name="" id="" className="form-control" name=" blood_group" value={input. blood_group} onChange={inputHandler}>
+<select name="" id="" className="form-control" name="blood_group" value={input. blood_group} onChange={inputHandler}>
     <option value="">Select</option>
-    <option value="">A+</option>
-    <option value="">A-</option>
-    <option value="">B+</option>
-    <option value="">B-</option>
-    <option value="">AB+</option>
-    <option value="">AB-</option>
-    <option value="">O+</option>
-    <option value="">O-</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
     
 </select>
     </div>
